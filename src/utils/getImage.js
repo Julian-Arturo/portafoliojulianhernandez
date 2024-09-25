@@ -1,0 +1,56 @@
+import {
+    web,
+    mobile,
+    backend,
+    creator,
+    html,
+    css,
+    javascript,
+    typescript,
+    reactjs,
+    redux,
+    tailwind,
+    nodejs,
+    mongodb,
+    threejs,
+    git,
+    figma,
+    docker,
+    incubapp,
+    logo27,
+    hexa,
+    dash,
+    carrent,
+    jobit,
+    tripguide
+  } from '../assets';
+  
+  const images = {
+    web,
+    mobile,
+    backend,
+    creator,
+    html,
+    css,
+    javascript,
+    typescript,
+    reactjs,
+    redux,
+    tailwind,
+    nodejs,
+    mongodb,
+    threejs,
+    git,
+    figma,
+    docker,
+    incubapp,
+    logo27,
+    hexa,
+    dash,
+    carrent,
+    jobit,
+    tripguide
+  };
+  
+  export const getImage = (name) => images[name] || null;
+  
