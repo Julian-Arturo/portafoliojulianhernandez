@@ -207,6 +207,39 @@
   }
 }
 
+/* Stars Background Fallback */
+.stars-background {
+  background: radial-gradient(2px 2px at 20% 30%, white, rgba(255, 255, 255, 0.2) 1%, transparent 80%),
+              radial-gradient(2px 2px at 60% 70%, white, rgba(255, 255, 255, 0.15) 1%, transparent 80%),
+              radial-gradient(1px 1px at 50% 50%, white, rgba(255, 255, 255, 0.1) 1%, transparent 80%),
+              radial-gradient(1px 1px at 80% 10%, white, rgba(255, 255, 255, 0.3) 1%, transparent 80%),
+              radial-gradient(2px 2px at 90% 60%, white, rgba(255, 255, 255, 0.2) 1%, transparent 80%),
+              radial-gradient(1px 1px at 30% 80%, white, rgba(255, 255, 255, 0.25) 1%, transparent 80%),
+              radial-gradient(1px 1px at 10% 40%, white, rgba(255, 255, 255, 0.2) 1%, transparent 80%);
+  background-repeat: repeat;
+  background-size: 200% 200%, 150% 150%, 180% 180%, 220% 220%, 170% 170%, 190% 190%, 210% 210%;
+  background-position: 0% 0%, 40% 60%, 130% 270%, 70% 100%, 20% 130%, 110% 40%, 180% 50%;
+  animation: twinkle 8s ease-in-out infinite, shift 15s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shift {
+  0% {
+    background-position: 0% 0%, 40% 60%, 130% 270%, 70% 100%, 20% 130%, 110% 40%, 180% 50%;
+  }
+  100% {
+    background-position: 2% 2%, 42% 62%, 132% 272%, 72% 102%, 22% 132%, 112% 42%, 182% 52%;
+  }
+}
+
 /* Scrollbar en navegadores basados en WebKit */
 ::-webkit-scrollbar {
   width: 10px;

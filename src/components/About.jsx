@@ -17,10 +17,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Julian is a versatile developer with expertise in mobile and web
-        development across diverse industries. Proficient in Flutter, ReactJS,
-        and Next.js, I&apos;ve built scalable apps from transportation to smart
-        home solutions. I excel in MVC architecture, microcontroller integration, and geolocation services.
+        Senior Flutter Developer with experience building scalable mobile applications for iOS and Android using Flutter 3.x and Dart.
+        Strong background in Clean Architecture and MVVM, advanced state management using BLoC and Provider, and deep experience integrating 
+        Firebase (Auth, Firestore, Cloud Messaging, Crashlytics), GraphQL APIs, and REST services. Experienced in CI/CD pipelines, testing, 
+        JWT authentication, Atomic Design, and Monorepos using Melos. Passionate about delivering high-performance, maintainable solutions.
       </motion.p>
 
       <div className=" mt-20 flex flex-wrap gap-10">

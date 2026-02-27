@@ -1,0 +1,30 @@
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: radial-gradient(circle, #f272c8, #ffffff);
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(242, 114, 200, 0.8);
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

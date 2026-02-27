@@ -22,7 +22,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="w-16 h-16 object-contain" width={64} height={64} />
           <p translate="no" className="text-white text-[18px] font-bold cursor-pointer flex">
             Julian &nbsp;
-            <span className="sm:block hidden">| FE Developer</span>
+            <span className="sm:block hidden">| Senior Flutter Developer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">

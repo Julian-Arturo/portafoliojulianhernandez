@@ -1,45 +1,38 @@
-import { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
-import * as random from "maath/random/dist/maath-random.esm";
-
-const Stars = (props) => {
-  const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(3000), { radius: 1.2 }));
-
-  useFrame((state, delta) => {
-    ref.current.rotation.x -= delta * 0.05;
-    ref.current.rotation.y -= delta * 0.03;
-  });
-
-  return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial
-          transparent
-          color="#f272c8"
-          size={0.002}
-          sizeAttenuation
-          depthWrite={false}
-        />
-      </Points>
-    </group>
-  );
-};
+import { useEffect, useState } from "react";
+import "./Stars.css";
 
 const StarsCanvas = () => {
+  const [stars, setStars] = useState([]);
+
+  useEffect(() => {
+    // Generar estrellas aleatorias
+    const generatedStars = Array.from({ length: 200 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      size: Math.random() * 2 + 1,
+      opacity: Math.random() * 0.5 + 0.5,
+      delay: Math.random() * 2,
+    }));
+    setStars(generatedStars);
+  }, []);
+
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
-      <Canvas
-        camera={{ position: [0, 0, 1] }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: false }} 
-      >
-        <Suspense fallback={null}>
-          <Stars />
-        </Suspense>
-        <Preload all />
-      </Canvas>
+    <div className="stars-container">
+      {stars.map((star) => (
+        <div
+          key={star.id}
+          className="star"
+          style={{
+            left: `${star.left}%`,
+            top: `${star.top}%`,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            opacity: star.opacity,
+            animationDelay: `${star.delay}s`,
+          }}
+        />
+      ))}
     </div>
   );
 };

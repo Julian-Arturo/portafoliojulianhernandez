@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import PropTypes from 'prop-types'; 
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+import AIFlowAnimation from "./AIFlowAnimation";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -49,7 +49,7 @@ const Contact = () => {
     <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[0.75] bg-black-100/40 backdrop-blur-md p-8 rounded-2xl border border-white/10"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -86,9 +86,11 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] flex items-center justify-center"
       >
-        <EarthCanvas />
+        <div className="w-full h-full opacity-40">
+          <AIFlowAnimation />
+        </div>
       </motion.div>
     </div>
   );

@@ -36,20 +36,21 @@ const Hero = () => {
               Hi, I&apos;m <span className="text-[#915eff]">Julian</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              Mobile and web developer across various industries. <br className="sm:block hidden" /> Skilled in Flutter, ReactJS, and Next.js
+              Senior Flutter Developer | Flutter 3.x | BLoC | MVVM <br className="sm:block hidden" /> Firebase | GraphQL | Clean Architecture
             </p>
           </div>
         </div>
 
-        <div className="mt-0">
-          <img
-            src={yo}
-            alt="Julian"
-            className="sm:w-[40vw] md:w-[60vw] lg:w-[25vw] 2xl:w-[20vw] 3xl:w-[30vw] h-auto rounded-full object-cover z-[20]"
-            width={400} 
-            height={400} 
-
-          />
+        <div className="mt-0 flex items-center justify-center">
+          <div className="relative w-fit">
+            <img
+              src={yo}
+              alt="Julian"
+              className="sm:w-[40vw] md:w-[60vw] lg:w-[25vw] 2xl:w-[20vw] 3xl:w-[30vw] aspect-square rounded-full object-cover z-[20] border-4 border-[#915eff] shadow-2xl shadow-[#915eff]/50 scale-105 hover:scale-110 transition-transform duration-300"
+              width={400} 
+              height={400} 
+            />
+          </div>
         </div>
       </div>
 

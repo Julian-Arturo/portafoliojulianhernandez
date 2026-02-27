@@ -27,6 +27,7 @@ import incubapp from "./company/incubapp.jpeg";
 import dash from "./company/dash.jpeg";
 import logo27 from "./company/logo27.png";
 import hexa from "./company/somoshexasolutions_logo.jpeg";
+import epam_neoris from "./company/epam_neoris.jpg";
 
 import canchaapp from "./project/canchaapp.png";
 import greenwall from "./project/greenwall.png";
@@ -41,7 +42,7 @@ import mc from "./project/mc.png";
 
 import andres from "./andres.jpeg";
 import gustavo from "./gustavo.jpeg";
-import yo from "./AvatarAndIcons.svg";
+import yo from "./julian_hernandez.jpg";
 
 
 
@@ -73,6 +74,7 @@ export {
   dash,
   logo27,
   hexa,
+  epam_neoris,
   canchaapp,
   greenwall,
   valliu,
